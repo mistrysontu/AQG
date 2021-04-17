@@ -1,4 +1,4 @@
-# Instraction
+# instruction
 1. Pull this repo
 2. Create a virtual environment (python3 -m virtualenv env)
 3. Install all the required package (pip install -r requirements.txt)
