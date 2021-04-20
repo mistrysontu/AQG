@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        <legend><h2>Join Today!</h2></legend>
+        {{registration_form | crispy}} 
+        {{profile_form | crispy}} <!-- these 2 forms will be submitted together as they are inside same form tag-->
+
+        <div>
+            <button type="submit">register</button>
+        </div>
+    </form>
+    <div>
+        Already have an account? Click <a href="{% url 'django-login' %}"><span>here</span></a> to sign in!
+    </div>
+</div>
+{% endblock content %}

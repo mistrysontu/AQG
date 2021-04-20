@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="w3-bar w3-container">
+    
+    <h1>Hello {{user.username}} (logged in as a {{user.profile.role | lower}})</h1>
+    <h1>Welcome to AQxams</h1>
+    <h2></h2>
+    <h1>{{posts}}</h1>
+    Click <a href="{% url 'django-logout' %}"><span>here</span></a> to log out..
+
+</div>
+
+{% endblock content %}
